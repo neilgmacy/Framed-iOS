@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>36BEC822-4D18-430A-BD48-D658FE34C80E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F3D9E233A4E5760695DDD21621771C7A46248B5D</key>
+		<string>bitbucket.org:neilmcguiggan/fussyscreenshot.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Screenshot Farmer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F3D9E233A4E5760695DDD21621771C7A46248B5D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>bitbucket.org:neilmcguiggan/fussyscreenshot.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F3D9E233A4E5760695DDD21621771C7A46248B5D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F3D9E233A4E5760695DDD21621771C7A46248B5D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Screenshot%20Farmer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GR1-tz-vLt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Framed-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -16,51 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s88-bb-cXu">
-                                <rect key="frame" x="233" y="110" width="135" height="30"/>
-                                <state key="normal" title="Choose Screenshot">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseScreenshot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="N0e-jr-zW4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9j-t2-bMb">
-                                <rect key="frame" x="242" y="460" width="116" height="30"/>
-                                <state key="normal" title="Save Screenshot">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveScreenshot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CH3-eH-Iqd"/>
-                                </connections>
-                            </button>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmp-gU-6pM">
-                                <rect key="frame" x="179" y="165" width="242" height="270"/>
+                                <rect key="frame" x="179" y="205" width="242" height="270"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="watchFrame" translatesAutoresizingMaskIntoConstraints="NO" id="LsF-Eg-EdL">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="steelWatchFrame" translatesAutoresizingMaskIntoConstraints="NO" id="LsF-Eg-EdL">
                                         <rect key="frame" x="0.0" y="0.0" width="242" height="270"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="270" id="Ikd-yM-wuQ"/>
                                             <constraint firstAttribute="width" constant="242" id="OLn-qQ-jCa"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenshotDummy" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-iy-G3A">
-                                        <rect key="frame" x="37" y="38" width="156" height="195"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKI-Ir-NDR">
+                                        <rect key="frame" x="36" y="36" width="156" height="195"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="156" id="Vim-k8-qUm"/>
-                                            <constraint firstAttribute="height" constant="195" id="j3f-fj-EmH"/>
+                                            <constraint firstAttribute="width" constant="156" id="E7I-e4-bfE"/>
+                                            <constraint firstAttribute="height" constant="195" id="vKf-Kd-6JI"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="screenshotDummy"/>
+                                        <connections>
+                                            <action selector="chooseScreenshot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tAk-rH-vwV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="LsF-Eg-EdL" firstAttribute="leading" secondItem="gmp-gU-6pM" secondAttribute="leading" id="E7Q-JW-DsI"/>
                                     <constraint firstAttribute="height" secondItem="LsF-Eg-EdL" secondAttribute="height" id="FAE-JN-Xxq"/>
                                     <constraint firstAttribute="width" secondItem="LsF-Eg-EdL" secondAttribute="width" id="OUa-hW-s71"/>
-                                    <constraint firstItem="Acc-iy-G3A" firstAttribute="centerX" secondItem="LsF-Eg-EdL" secondAttribute="centerX" constant="-6" id="ZFt-dH-KSt"/>
                                     <constraint firstAttribute="height" secondItem="LsF-Eg-EdL" secondAttribute="height" id="giU-4K-iQz"/>
-                                    <constraint firstItem="Acc-iy-G3A" firstAttribute="top" secondItem="gmp-gU-6pM" secondAttribute="top" constant="38" id="nhW-Zx-I19"/>
                                     <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="gmp-gU-6pM" secondAttribute="top" id="shO-8c-bdx"/>
                                     <constraint firstAttribute="width" secondItem="LsF-Eg-EdL" secondAttribute="width" id="wdJ-KM-ZC0"/>
+                                    <constraint firstItem="LsF-Eg-EdL" firstAttribute="centerX" secondItem="oKI-Ir-NDR" secondAttribute="centerX" constant="7" id="y3m-pp-yyV"/>
+                                    <constraint firstItem="oKI-Ir-NDR" firstAttribute="top" secondItem="LsF-Eg-EdL" secondAttribute="bottom" constant="-234" id="zAS-ZL-aBk"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -69,28 +56,81 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0G-3n-XaJ">
+                                <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSH-UX-coT">
+                                <rect key="frame" x="289" y="139" width="22" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="L9o-Kf-dXD"/>
+                                    <constraint firstAttribute="width" secondItem="GSH-UX-coT" secondAttribute="height" multiplier="1:2" id="MlC-NB-LFq"/>
+                                    <constraint firstAttribute="height" constant="44" id="coH-iD-X9F"/>
+                                </constraints>
+                                <state key="normal" image="watchFrameButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MlC-NB-LFq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="chooseFrame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MXB-5o-s5I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="z9j-t2-bMb" secondAttribute="centerX" id="4hK-iI-ega"/>
-                            <constraint firstItem="z9j-t2-bMb" firstAttribute="top" secondItem="LsF-Eg-EdL" secondAttribute="bottom" constant="25" id="9k2-Ni-nZa"/>
+                            <constraint firstItem="l0G-3n-XaJ" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="AkD-fk-tMz"/>
+                            <constraint firstAttribute="centerX" secondItem="GSH-UX-coT" secondAttribute="centerX" id="EEn-f4-IW7"/>
                             <constraint firstAttribute="centerX" secondItem="gmp-gU-6pM" secondAttribute="centerX" id="FYD-mp-Gvx"/>
-                            <constraint firstAttribute="centerY" secondItem="gmp-gU-6pM" secondAttribute="centerY" id="hbx-ef-LmB"/>
-                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="s88-bb-cXu" secondAttribute="bottom" constant="25" id="jQM-KR-CN4"/>
-                            <constraint firstAttribute="centerX" secondItem="s88-bb-cXu" secondAttribute="centerX" id="rxN-F8-Pap"/>
+                            <constraint firstAttribute="centerY" secondItem="gmp-gU-6pM" secondAttribute="centerY" constant="-40" id="hbx-ef-LmB"/>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="GSH-UX-coT" secondAttribute="bottom" constant="22" id="osH-p5-410"/>
+                            <constraint firstItem="l0G-3n-XaJ" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="rLl-a7-8mR"/>
+                            <constraint firstAttribute="centerX" secondItem="l0G-3n-XaJ" secondAttribute="centerX" id="zdp-gM-cfZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Framed" id="lIw-Vs-Gg9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="HUC-Sc-A88">
+                            <connections>
+                                <action selector="shareScreenshot:" destination="vXZ-lx-hvc" id="EVG-Jr-dAJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="framePicker" destination="l0G-3n-XaJ" id="D38-FT-oDq"/>
                         <outlet property="framedScreenshot" destination="gmp-gU-6pM" id="5xW-K0-wit"/>
-                        <outlet property="screenshotImage" destination="Acc-iy-G3A" id="yIJ-hV-KOi"/>
+                        <outlet property="screenshotImageButton" destination="oKI-Ir-NDR" id="c5N-7c-xdY"/>
+                        <outlet property="watchFrame" destination="LsF-Eg-EdL" id="btK-HX-LN8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1301" y="451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n5W-FX-fAf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GR1-tz-vLt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Kl-RW-KoL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="lNX-5B-dmH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIJ-vb-tut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="451"/>
         </scene>
     </scenes>
     <resources>
         <image name="screenshotDummy" width="156" height="195"/>
-        <image name="watchFrame" width="484" height="542"/>
+        <image name="steelWatchFrame" width="484" height="542"/>
+        <image name="watchFrameButton" width="22" height="44"/>
     </resources>
 </document>
