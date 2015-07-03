@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  Screenshot Farmer
+//  Framed
 //
 //  Created by Neil McGuiggan on 31/05/2015.
 //  Copyright (c) 2015 Multicoloured Software. All rights reserved.
@@ -19,10 +19,14 @@
 @property (weak, nonatomic) IBOutlet UIImageView *watchFrame;
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
 @property (weak, nonatomic) IBOutlet UIView *transparentBackground;
+@property (weak, nonatomic) IBOutlet UILabel *helpLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *helpArrow;
 
 @end
 
 @implementation ViewController
+
+static NSString *kShownHelpKey = @"ShownHelp";
 
 typedef NS_ENUM(NSInteger, WatchFrameType) {
     WatchFrameTypeSport,
@@ -35,6 +39,8 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self hideHelpLabelAfterFirstLaunch];
+    
     watchFrameNames = @[@"Sport", @"Space Grey Sport", @"Steel", @"Rose Gold", @"Yellow Gold"];
     
     self.framePicker.delegate = self;
@@ -42,9 +48,32 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
     [self.framePicker selectRow:2 inComponent:0 animated:YES];
 }
 
+- (void)hideHelpLabelAfterFirstLaunch {
+    BOOL shownHelp = [[NSUserDefaults standardUserDefaults] boolForKey:kShownHelpKey];
+    
+    if (!shownHelp) {
+        self.helpLabel.hidden = NO;
+        self.helpArrow.hidden = NO;
+        [self animateHideInstructionLabel];
+    }
+}
+
+- (void)animateHideInstructionLabel {
+    [UIView animateWithDuration:1.0
+                          delay:3.0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.helpLabel setAlpha:0.0];
+                         [self.helpArrow setAlpha:0.0];
+                     }
+                     completion:^(BOOL finished){
+                         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kShownHelpKey];
+                     }];
+}
+
 - (IBAction)chooseScreenshot:(id)sender {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        [[[UIAlertView alloc] initWithTitle:@"Problemo" message:@"Can't access photo library on this device" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Uh-oh" message:@"No photo library available." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         return;
     }
     
@@ -53,6 +82,7 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
     imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.allowsEditing = YES;
     imagePickerController.delegate = self;
     
     self.imagePickerController = imagePickerController;
@@ -82,7 +112,7 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
     
     if (error) {
         title = @"Uh oh";
-        message = @"Your screenshot couldn't be saved. Make sure Screenshot Farmer has permission to access your photos - you can change this in the Settings app";
+        message = @"Your screenshot couldn't be saved. Make sure Framed has permission to access your photos - you can change this in the Settings app";
     }
     
     [[[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
@@ -96,7 +126,16 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image, *editedImage, *originalImage;// = [info valueForKey:UIImagePickerControllerOriginalImage];
+    editedImage = (UIImage *) [info objectForKey: UIImagePickerControllerEditedImage];
+    originalImage = (UIImage *) [info objectForKey: UIImagePickerControllerOriginalImage];
+    
+    if (editedImage) {
+        image = editedImage;
+    } else {
+        image = originalImage;
+    }
+    
     [self.screenshotImageButton setImage:image forState:UIControlStateNormal];
     
     [self dismissUIImagePickerController];

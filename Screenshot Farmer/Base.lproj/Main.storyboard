@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GR1-tz-vLt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GR1-tz-vLt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -79,19 +79,44 @@
                                     <action selector="chooseFrame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MXB-5o-s5I"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap this..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7h-oB-VU2">
+                                <rect key="frame" x="347" y="150" width="74" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ZwG-fP-RBo">
+                                <rect key="frame" x="313" y="158" width="33" height="5"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="d7h-oB-VU2" firstAttribute="leading" secondItem="ZwG-fP-RBo" secondAttribute="trailing" constant="1" id="1sS-f2-jMs"/>
                             <constraint firstItem="l0G-3n-XaJ" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="AkD-fk-tMz"/>
                             <constraint firstAttribute="centerX" secondItem="GSH-UX-coT" secondAttribute="centerX" id="EEn-f4-IW7"/>
                             <constraint firstAttribute="centerX" secondItem="gmp-gU-6pM" secondAttribute="centerX" id="FYD-mp-Gvx"/>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="ZwG-fP-RBo" secondAttribute="bottom" constant="42" id="Hbo-ax-q6f"/>
                             <constraint firstAttribute="centerY" secondItem="gmp-gU-6pM" secondAttribute="centerY" constant="-40" id="hbx-ef-LmB"/>
+                            <constraint firstItem="d7h-oB-VU2" firstAttribute="leading" secondItem="GSH-UX-coT" secondAttribute="trailing" constant="36" id="jSo-P9-cAi"/>
                             <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="GSH-UX-coT" secondAttribute="bottom" constant="22" id="osH-p5-410"/>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="d7h-oB-VU2" secondAttribute="bottom" constant="34" id="pgA-4x-dSU"/>
                             <constraint firstItem="l0G-3n-XaJ" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="rLl-a7-8mR"/>
                             <constraint firstAttribute="centerX" secondItem="l0G-3n-XaJ" secondAttribute="centerX" id="zdp-gM-cfZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Framed" id="lIw-Vs-Gg9">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="qmf-Wh-HU2">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="rOQ-hn-J5h">
+                                <rect key="frame" x="70" y="214" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4G2-4V-Fvz" kind="show" id="JwB-na-01E"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="HUC-Sc-A88">
                             <connections>
                                 <action selector="shareScreenshot:" destination="vXZ-lx-hvc" id="EVG-Jr-dAJ"/>
@@ -101,6 +126,8 @@
                     <connections>
                         <outlet property="framePicker" destination="l0G-3n-XaJ" id="D38-FT-oDq"/>
                         <outlet property="framedScreenshot" destination="gmp-gU-6pM" id="5xW-K0-wit"/>
+                        <outlet property="helpArrow" destination="ZwG-fP-RBo" id="tlE-M7-HsI"/>
+                        <outlet property="helpLabel" destination="d7h-oB-VU2" id="rYg-4S-b9y"/>
                         <outlet property="screenshotImageButton" destination="oKI-Ir-NDR" id="c5N-7c-xdY"/>
                         <outlet property="watchFrame" destination="LsF-Eg-EdL" id="btK-HX-LN8"/>
                     </connections>
@@ -108,6 +135,199 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1301" y="451"/>
+        </scene>
+        <!--Credits-->
+        <scene sceneID="dLg-78-7Ho">
+            <objects>
+                <viewController id="K7Q-7h-PYj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ffe-pT-rSE"/>
+                        <viewControllerLayoutGuide type="bottom" id="dVS-WD-xBE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xr7-Xo-Jvv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6T-l5-TF1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d1-rI-EjD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Icons">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="  Icons made by ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Anton Saputro">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" (http://www.flaticon.com/authors/anton-saputro) from www.flaticon.com are licensed by CC BY 3.0: ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://creativecommons.org/licenses/by/3.0/">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+Icons made by Freepik (</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://www.flaticon.com/authors/freepik">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=") from www.flaticon.com are licensed by ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="CC BY 3.0: http://creativecommons.org/licenses/by/3.0/  ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Notification Image">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">  The notification placeholder image came from a Sketch resource in Sketch App Sources: http://www.sketchappsources.com/free-source/1174-apple-watch-notification-prototype-sketch-freebie-resource.html  </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Other Images">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+ Images used in this app come from Design+Code's brilliant Sketch template: https://designcode.io/watch</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="16" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n6T-l5-TF1" firstAttribute="height" secondItem="xr7-Xo-Jvv" secondAttribute="height" id="0eT-cy-3ns"/>
+                            <constraint firstAttribute="centerX" secondItem="n6T-l5-TF1" secondAttribute="centerX" id="5FV-oW-aQq"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="height" secondItem="n6T-l5-TF1" secondAttribute="height" constant="-64" id="7pq-oW-RVH"/>
+                            <constraint firstAttribute="centerY" secondItem="n6T-l5-TF1" secondAttribute="centerY" id="IM4-Ox-NAh"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="width" secondItem="n6T-l5-TF1" secondAttribute="width" id="K0T-7L-F5i"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="centerY" secondItem="n6T-l5-TF1" secondAttribute="centerY" id="PXm-Nh-7ah"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="width" secondItem="n6T-l5-TF1" secondAttribute="width" id="Pls-VY-T05"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="centerX" secondItem="n6T-l5-TF1" secondAttribute="centerX" id="QBF-Yb-e2C"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="width" secondItem="n6T-l5-TF1" secondAttribute="width" id="Swx-Cr-YnW"/>
+                            <constraint firstItem="n6T-l5-TF1" firstAttribute="width" secondItem="xr7-Xo-Jvv" secondAttribute="width" id="WYh-2d-IXc"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="centerY" secondItem="n6T-l5-TF1" secondAttribute="centerY" constant="32" id="WbF-tg-OSE"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="width" secondItem="n6T-l5-TF1" secondAttribute="width" id="cyJ-jV-E5r"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="centerX" secondItem="n6T-l5-TF1" secondAttribute="centerX" id="egj-rl-VNf"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="height" secondItem="n6T-l5-TF1" secondAttribute="height" id="nWb-AQ-wdm"/>
+                            <constraint firstItem="4d1-rI-EjD" firstAttribute="height" secondItem="n6T-l5-TF1" secondAttribute="height" id="toD-qz-kAr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="K0T-7L-F5i"/>
+                                <exclude reference="PXm-Nh-7ah"/>
+                                <exclude reference="Pls-VY-T05"/>
+                                <exclude reference="QBF-Yb-e2C"/>
+                                <exclude reference="Swx-Cr-YnW"/>
+                                <exclude reference="nWb-AQ-wdm"/>
+                                <exclude reference="toD-qz-kAr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Credits" id="cA0-uo-h0n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YxH-6a-Xsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888" y="453"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n5W-FX-fAf">
@@ -127,8 +347,27 @@
             </objects>
             <point key="canvasLocation" x="576" y="451"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pHO-rt-4BU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4G2-4V-Fvz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5n9-hT-age">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K7Q-7h-PYj" kind="relationship" relationship="rootViewController" id="XDB-tf-bDt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eam-3G-9Na" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="453"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow" width="33" height="5"/>
         <image name="screenshotDummy" width="156" height="195"/>
         <image name="steelWatchFrame" width="484" height="542"/>
         <image name="watchFrameButton" width="22" height="44"/>
