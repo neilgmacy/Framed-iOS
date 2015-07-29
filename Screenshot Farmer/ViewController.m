@@ -77,12 +77,10 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
         return;
     }
     
-    NSLog(@"Accessing photos now...");
-    
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
     imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    imagePickerController.allowsEditing = YES;
+    imagePickerController.allowsEditing = NO;
     imagePickerController.delegate = self;
     
     self.imagePickerController = imagePickerController;

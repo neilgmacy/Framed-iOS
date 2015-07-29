@@ -40,7 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CD59ECC71B1B40CD00669F62 /* Framed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Framed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD59ECC71B1B40CD00669F62 /* framed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = framed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59ECCB1B1B40CD00669F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD59ECCC1B1B40CD00669F62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD59ECCE1B1B40CD00669F62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		CD59ECC81B1B40CD00669F62 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD59ECC71B1B40CD00669F62 /* Framed.app */,
+				CD59ECC71B1B40CD00669F62 /* framed.app */,
 				CD59ECE01B1B40CD00669F62 /* Screenshot FarmerTests.xctest */,
 			);
 			name = Products;
@@ -135,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD59ECC61B1B40CD00669F62 /* Framed */ = {
+		CD59ECC61B1B40CD00669F62 /* framed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD59ECEA1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "Framed" */;
+			buildConfigurationList = CD59ECEA1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "framed" */;
 			buildPhases = (
 				CD59ECC31B1B40CD00669F62 /* Sources */,
 				CD59ECC41B1B40CD00669F62 /* Frameworks */,
@@ -148,9 +148,9 @@
 			);
 			dependencies = (
 			);
-			name = Framed;
+			name = framed;
 			productName = "Screenshot Farmer";
-			productReference = CD59ECC71B1B40CD00669F62 /* Framed.app */;
+			productReference = CD59ECC71B1B40CD00669F62 /* framed.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CD59ECDF1B1B40CD00669F62 /* Screenshot FarmerTests */ = {
@@ -182,11 +182,11 @@
 				TargetAttributes = {
 					CD59ECC61B1B40CD00669F62 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 84MQR69VX9;
+						DevelopmentTeam = G5F69H942J;
 					};
 					CD59ECDF1B1B40CD00669F62 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 84MQR69VX9;
+						DevelopmentTeam = G5F69H942J;
 						TestTargetID = CD59ECC61B1B40CD00669F62;
 					};
 				};
@@ -204,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD59ECC61B1B40CD00669F62 /* Framed */,
+				CD59ECC61B1B40CD00669F62 /* framed */,
 				CD59ECDF1B1B40CD00669F62 /* Screenshot FarmerTests */,
 			);
 		};
@@ -254,7 +254,7 @@
 /* Begin PBXTargetDependency section */
 		CD59ECE21B1B40CD00669F62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD59ECC61B1B40CD00669F62 /* Framed */;
+			target = CD59ECC61B1B40CD00669F62 /* framed */;
 			targetProxy = CD59ECE11B1B40CD00669F62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -409,7 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Screenshot Farmer.app/Screenshot Farmer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Framed.app/Framed";
 			};
 			name = Debug;
 		};
@@ -427,7 +427,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Screenshot Farmer.app/Screenshot Farmer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Framed.app/Framed";
 			};
 			name = Release;
 		};
@@ -443,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD59ECEA1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "Framed" */ = {
+		CD59ECEA1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "framed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD59ECEB1B1B40CD00669F62 /* Debug */,
