@@ -11,6 +11,7 @@
 @interface ViewController ()
 {
     NSArray *watchFrameNames;
+    BOOL showingPicker;
 }
 
 @property (weak, nonatomic) IBOutlet UIPickerView *framePicker;
@@ -18,9 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *screenshotImageButton;
 @property (weak, nonatomic) IBOutlet UIImageView *watchFrame;
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
-@property (weak, nonatomic) IBOutlet UIView *transparentBackground;
-@property (weak, nonatomic) IBOutlet UILabel *helpLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *helpArrow;
 
 @end
 
@@ -39,36 +37,11 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self hideHelpLabelAfterFirstLaunch];
-    
     watchFrameNames = @[@"Sport", @"Space Grey Sport", @"Steel", @"Rose Gold", @"Yellow Gold"];
     
     self.framePicker.delegate = self;
     self.framePicker.dataSource = self;
     [self.framePicker selectRow:2 inComponent:0 animated:YES];
-}
-
-- (void)hideHelpLabelAfterFirstLaunch {
-    BOOL shownHelp = [[NSUserDefaults standardUserDefaults] boolForKey:kShownHelpKey];
-    
-    if (!shownHelp) {
-        self.helpLabel.hidden = NO;
-        self.helpArrow.hidden = NO;
-        [self animateHideInstructionLabel];
-    }
-}
-
-- (void)animateHideInstructionLabel {
-    [UIView animateWithDuration:1.0
-                          delay:3.0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         [self.helpLabel setAlpha:0.0];
-                         [self.helpArrow setAlpha:0.0];
-                     }
-                     completion:^(BOOL finished){
-                         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kShownHelpKey];
-                     }];
 }
 
 - (IBAction)chooseScreenshot:(id)sender {
@@ -117,8 +90,12 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
 }
 
 - (IBAction)chooseFrame:(id)sender {
-    self.framePicker.hidden = NO;
-    self.transparentBackground.hidden = NO;
+    [self togglePicker];
+}
+
+- (void)togglePicker {
+    self.framePicker.hidden = showingPicker;
+    showingPicker = !showingPicker;
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -185,8 +162,7 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
             break;
     }
     
-    self.framePicker.hidden = YES;
-    self.transparentBackground.hidden = YES;
+    [self togglePicker];
 }
 
 @end

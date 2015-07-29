@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GR1-tz-vLt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Framed-->
@@ -17,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmp-gU-6pM">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmp-gU-6pM" userLabel="watch">
                                 <rect key="frame" x="179" y="205" width="242" height="270"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="steelWatchFrame" translatesAutoresizingMaskIntoConstraints="NO" id="LsF-Eg-EdL">
@@ -60,52 +59,54 @@
                                 <rect key="frame" x="0.0" y="438" width="600" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSH-UX-coT">
-                                <rect key="frame" x="289" y="139" width="22" height="44"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-Rf-Lv4">
+                                <rect key="frame" x="179" y="128" width="229" height="87"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="L9o-Kf-dXD"/>
-                                    <constraint firstAttribute="width" secondItem="GSH-UX-coT" secondAttribute="height" multiplier="1:2" id="MlC-NB-LFq"/>
-                                    <constraint firstAttribute="height" constant="44" id="coH-iD-X9F"/>
+                                    <constraint firstAttribute="width" constant="229" id="bCA-Ro-a5G"/>
+                                    <constraint firstAttribute="height" constant="87" id="nl1-M0-hmZ"/>
                                 </constraints>
-                                <state key="normal" image="watchFrameButton">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSH-UX-coT">
+                                <rect key="frame" x="196" y="152" width="115" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Change Frame">
+                                    <color key="titleColor" red="0.41176470588235292" green="0.21176470588235294" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="MlC-NB-LFq"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="chooseFrame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MXB-5o-s5I"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap this..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7h-oB-VU2">
-                                <rect key="frame" x="347" y="150" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ZwG-fP-RBo">
-                                <rect key="frame" x="313" y="158" width="33" height="5"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldC-AQ-GzA">
+                                <rect key="frame" x="342" y="152" width="45" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.41176470588235292" green="0.21176470588235294" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareScreenshot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UUw-jn-d3Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d7h-oB-VU2" firstAttribute="leading" secondItem="ZwG-fP-RBo" secondAttribute="trailing" constant="1" id="1sS-f2-jMs"/>
                             <constraint firstItem="l0G-3n-XaJ" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="AkD-fk-tMz"/>
-                            <constraint firstAttribute="centerX" secondItem="GSH-UX-coT" secondAttribute="centerX" id="EEn-f4-IW7"/>
+                            <constraint firstItem="GSH-UX-coT" firstAttribute="centerX" secondItem="vaj-Rf-Lv4" secondAttribute="centerX" constant="-40.5" id="EFn-Kd-kFG"/>
                             <constraint firstAttribute="centerX" secondItem="gmp-gU-6pM" secondAttribute="centerX" id="FYD-mp-Gvx"/>
-                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="ZwG-fP-RBo" secondAttribute="bottom" constant="42" id="Hbo-ax-q6f"/>
+                            <constraint firstAttribute="centerX" secondItem="vaj-Rf-Lv4" secondAttribute="centerX" constant="6.5" id="NVu-m4-psS"/>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="ldC-AQ-GzA" secondAttribute="bottom" constant="17" id="e4p-ti-EiT"/>
                             <constraint firstAttribute="centerY" secondItem="gmp-gU-6pM" secondAttribute="centerY" constant="-40" id="hbx-ef-LmB"/>
-                            <constraint firstItem="d7h-oB-VU2" firstAttribute="leading" secondItem="GSH-UX-coT" secondAttribute="trailing" constant="36" id="jSo-P9-cAi"/>
-                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="GSH-UX-coT" secondAttribute="bottom" constant="22" id="osH-p5-410"/>
-                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="d7h-oB-VU2" secondAttribute="bottom" constant="34" id="pgA-4x-dSU"/>
+                            <constraint firstItem="ldC-AQ-GzA" firstAttribute="centerX" secondItem="vaj-Rf-Lv4" secondAttribute="centerX" constant="70.5" id="lFS-JK-XUa"/>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="vaj-Rf-Lv4" secondAttribute="bottom" constant="-10" id="nlK-l2-7RP"/>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="GSH-UX-coT" secondAttribute="bottom" constant="17" id="otB-5j-EkY"/>
+                            <constraint firstItem="GSH-UX-coT" firstAttribute="baseline" secondItem="ldC-AQ-GzA" secondAttribute="baseline" id="pKO-R9-tx0"/>
                             <constraint firstItem="l0G-3n-XaJ" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="rLl-a7-8mR"/>
                             <constraint firstAttribute="centerX" secondItem="l0G-3n-XaJ" secondAttribute="centerX" id="zdp-gM-cfZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Framed" id="lIw-Vs-Gg9">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="qmf-Wh-HU2">
+                        <barButtonItem key="leftBarButtonItem" id="qmf-Wh-HU2">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="rOQ-hn-J5h">
                                 <rect key="frame" x="70" y="214" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,17 +118,10 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="HUC-Sc-A88">
-                            <connections>
-                                <action selector="shareScreenshot:" destination="vXZ-lx-hvc" id="EVG-Jr-dAJ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="framePicker" destination="l0G-3n-XaJ" id="D38-FT-oDq"/>
                         <outlet property="framedScreenshot" destination="gmp-gU-6pM" id="5xW-K0-wit"/>
-                        <outlet property="helpArrow" destination="ZwG-fP-RBo" id="tlE-M7-HsI"/>
-                        <outlet property="helpLabel" destination="d7h-oB-VU2" id="rYg-4S-b9y"/>
                         <outlet property="screenshotImageButton" destination="oKI-Ir-NDR" id="c5N-7c-xdY"/>
                         <outlet property="watchFrame" destination="LsF-Eg-EdL" id="btK-HX-LN8"/>
                     </connections>
@@ -367,9 +361,7 @@ Icons made by Freepik (</string>
         </scene>
     </scenes>
     <resources>
-        <image name="arrow" width="33" height="5"/>
         <image name="screenshotDummy" width="156" height="195"/>
         <image name="steelWatchFrame" width="484" height="542"/>
-        <image name="watchFrameButton" width="22" height="44"/>
     </resources>
 </document>
