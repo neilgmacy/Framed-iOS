@@ -19,6 +19,8 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.412 green:0.212 blue:0.863 alpha:1]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"AvenirNext-DemiBold" size:18.0]}];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"AvenirNext-Regular" size:17.0]} forState:UIControlStateNormal];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
     return YES;
 }
