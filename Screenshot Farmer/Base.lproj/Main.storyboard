@@ -38,6 +38,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="LsF-Eg-EdL" firstAttribute="leading" secondItem="gmp-gU-6pM" secondAttribute="leading" id="E7Q-JW-DsI"/>
                                     <constraint firstAttribute="height" secondItem="LsF-Eg-EdL" secondAttribute="height" id="FAE-JN-Xxq"/>
@@ -61,47 +62,42 @@
                             </pickerView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-Rf-Lv4">
                                 <rect key="frame" x="179" y="128" width="229" height="87"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="229" id="bCA-Ro-a5G"/>
                                     <constraint firstAttribute="height" constant="87" id="nl1-M0-hmZ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSH-UX-coT">
-                                <rect key="frame" x="196" y="152" width="115" height="36"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="Change Frame">
-                                    <color key="titleColor" red="0.41176470588235292" green="0.21176470588235294" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseFrame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MXB-5o-s5I"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldC-AQ-GzA">
-                                <rect key="frame" x="342" y="152" width="45" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUK-Pk-7Cc">
+                                <rect key="frame" x="343" y="160" width="45" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Share">
-                                    <color key="titleColor" red="0.41176470588235292" green="0.21176470588235294" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.41176470590000003" green="0.21176470589999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="shareScreenshot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UUw-jn-d3Q"/>
-                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7U-bt-oGK">
+                                <rect key="frame" x="199" y="160" width="115" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Change Frame">
+                                    <color key="titleColor" red="0.41176470590000003" green="0.21176470589999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="w7U-bt-oGK" secondAttribute="bottom" constant="9" id="5N2-KO-p88"/>
                             <constraint firstItem="l0G-3n-XaJ" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="AkD-fk-tMz"/>
-                            <constraint firstItem="GSH-UX-coT" firstAttribute="centerX" secondItem="vaj-Rf-Lv4" secondAttribute="centerX" constant="-40.5" id="EFn-Kd-kFG"/>
                             <constraint firstAttribute="centerX" secondItem="gmp-gU-6pM" secondAttribute="centerX" id="FYD-mp-Gvx"/>
+                            <constraint firstItem="vaj-Rf-Lv4" firstAttribute="centerX" secondItem="w7U-bt-oGK" secondAttribute="centerX" constant="37" id="N9v-eX-CYm"/>
                             <constraint firstAttribute="centerX" secondItem="vaj-Rf-Lv4" secondAttribute="centerX" constant="6.5" id="NVu-m4-psS"/>
-                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="ldC-AQ-GzA" secondAttribute="bottom" constant="17" id="e4p-ti-EiT"/>
+                            <constraint firstItem="vaj-Rf-Lv4" firstAttribute="centerX" secondItem="fUK-Pk-7Cc" secondAttribute="centerX" constant="-72" id="aYv-sY-uOe"/>
                             <constraint firstAttribute="centerY" secondItem="gmp-gU-6pM" secondAttribute="centerY" constant="-40" id="hbx-ef-LmB"/>
-                            <constraint firstItem="ldC-AQ-GzA" firstAttribute="centerX" secondItem="vaj-Rf-Lv4" secondAttribute="centerX" constant="70.5" id="lFS-JK-XUa"/>
                             <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="vaj-Rf-Lv4" secondAttribute="bottom" constant="-10" id="nlK-l2-7RP"/>
-                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="GSH-UX-coT" secondAttribute="bottom" constant="17" id="otB-5j-EkY"/>
-                            <constraint firstItem="GSH-UX-coT" firstAttribute="baseline" secondItem="ldC-AQ-GzA" secondAttribute="baseline" id="pKO-R9-tx0"/>
                             <constraint firstItem="l0G-3n-XaJ" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="rLl-a7-8mR"/>
+                            <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="fUK-Pk-7Cc" secondAttribute="bottom" constant="9" id="spN-MV-HDd"/>
+                            <constraint firstItem="fUK-Pk-7Cc" firstAttribute="baseline" secondItem="w7U-bt-oGK" secondAttribute="baseline" id="tL2-JA-cHw"/>
                             <constraint firstAttribute="centerX" secondItem="l0G-3n-XaJ" secondAttribute="centerX" id="zdp-gM-cfZ"/>
                         </constraints>
                     </view>

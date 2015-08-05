@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
 }
 
 - (IBAction)shareScreenshot:(id)sender {
-    UIGraphicsBeginImageContextWithOptions(self.framedScreenshot.bounds.size, self.framedScreenshot.opaque, 0.0);
+    UIGraphicsBeginImageContextWithOptions(self.framedScreenshot.bounds.size, NO, 0.0);
     [self.framedScreenshot.layer renderInContext:UIGraphicsGetCurrentContext()];
     
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
