@@ -24,8 +24,6 @@
 
 @implementation ViewController
 
-static NSString *kShownHelpKey = @"ShownHelp";
-
 typedef NS_ENUM(NSInteger, WatchFrameType) {
     WatchFrameTypeSport,
     WatchFrameTypeBlackSport,
