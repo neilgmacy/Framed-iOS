@@ -59,14 +59,16 @@ typedef NS_ENUM(NSInteger, WatchFrameType) {
 }
 
 - (IBAction)shareScreenshot:(id)sender {
-    UIGraphicsBeginImageContextWithOptions(self.framedScreenshot.bounds.size, NO, 0.0);
-    [self.framedScreenshot.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIGraphicsBeginImageContextWithOptions(self.framedScreenshot.bounds.size, NO, 0.0f);
+    [self.framedScreenshot drawViewHierarchyInRect:self.framedScreenshot.bounds afterScreenUpdates:YES];
     
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[img] applicationActivities:nil];
+    NSData *pngImageData = UIImagePNGRepresentation(img);
+
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[pngImageData] applicationActivities:nil];
     
     [self presentViewController:activityViewController
                                        animated:YES
