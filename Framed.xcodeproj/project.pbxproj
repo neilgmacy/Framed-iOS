@@ -7,24 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD59ECCD1B1B40CD00669F62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59ECCC1B1B40CD00669F62 /* main.m */; };
-		CD59ECD01B1B40CD00669F62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59ECCF1B1B40CD00669F62 /* AppDelegate.m */; };
-		CD59ECD31B1B40CD00669F62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59ECD21B1B40CD00669F62 /* ViewController.m */; };
+		CD5005741BFE6D120038AFD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5005731BFE6D120038AFD0 /* Images.xcassets */; };
+		CD5005791BFE6D210038AFD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5005761BFE6D210038AFD0 /* AppDelegate.m */; };
+		CD50057A1BFE6D210038AFD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5005781BFE6D210038AFD0 /* ViewController.m */; };
+		CD50057D1BFE6D440038AFD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD50057B1BFE6D440038AFD0 /* Info.plist */; };
+		CD50057E1BFE6D440038AFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD50057C1BFE6D440038AFD0 /* main.m */; };
 		CD59ECD61B1B40CD00669F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD59ECD41B1B40CD00669F62 /* Main.storyboard */; };
-		CD59ECD81B1B40CD00669F62 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD59ECD71B1B40CD00669F62 /* Images.xcassets */; };
 		CD59ECDB1B1B40CD00669F62 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD59ECD91B1B40CD00669F62 /* LaunchScreen.xib */; };
-		CD59ECE71B1B40CD00669F62 /* FramedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59ECE61B1B40CD00669F62 /* FramedTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CD59ECE11B1B40CD00669F62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD59ECBF1B1B40CD00669F62 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD59ECC61B1B40CD00669F62;
-			remoteInfo = "Screenshot Farmer";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CD406B661B25C98700EDCD7F /* Embed App Extensions */ = {
@@ -40,30 +30,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD5005731BFE6D120038AFD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Framed/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		CD5005751BFE6D210038AFD0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Framed/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		CD5005761BFE6D210038AFD0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Framed/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		CD5005771BFE6D210038AFD0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Framed/ViewController.h; sourceTree = SOURCE_ROOT; };
+		CD5005781BFE6D210038AFD0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Framed/ViewController.m; sourceTree = SOURCE_ROOT; };
+		CD50057B1BFE6D440038AFD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Framed/Info.plist; sourceTree = SOURCE_ROOT; };
+		CD50057C1BFE6D440038AFD0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Framed/main.m; sourceTree = SOURCE_ROOT; };
 		CD59ECC71B1B40CD00669F62 /* framed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = framed.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD59ECCB1B1B40CD00669F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD59ECCC1B1B40CD00669F62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CD59ECCE1B1B40CD00669F62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CD59ECCF1B1B40CD00669F62 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD59ECD11B1B40CD00669F62 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CD59ECD21B1B40CD00669F62 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CD59ECD51B1B40CD00669F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CD59ECD71B1B40CD00669F62 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD59ECDA1B1B40CD00669F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CD59ECE01B1B40CD00669F62 /* FramedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FramedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD59ECE51B1B40CD00669F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD59ECE61B1B40CD00669F62 /* FramedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FramedTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CD59ECC41B1B40CD00669F62 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD59ECDD1B1B40CD00669F62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				CD59ECC91B1B40CD00669F62 /* Framed */,
-				CD59ECE31B1B40CD00669F62 /* FramedTests */,
 				CD59ECC81B1B40CD00669F62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				CD59ECC71B1B40CD00669F62 /* framed.app */,
-				CD59ECE01B1B40CD00669F62 /* FramedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,42 +72,24 @@
 		CD59ECC91B1B40CD00669F62 /* Framed */ = {
 			isa = PBXGroup;
 			children = (
-				CD59ECCE1B1B40CD00669F62 /* AppDelegate.h */,
-				CD59ECCF1B1B40CD00669F62 /* AppDelegate.m */,
-				CD59ECD11B1B40CD00669F62 /* ViewController.h */,
-				CD59ECD21B1B40CD00669F62 /* ViewController.m */,
+				CD5005751BFE6D210038AFD0 /* AppDelegate.h */,
+				CD5005761BFE6D210038AFD0 /* AppDelegate.m */,
+				CD5005771BFE6D210038AFD0 /* ViewController.h */,
+				CD5005781BFE6D210038AFD0 /* ViewController.m */,
+				CD5005731BFE6D120038AFD0 /* Images.xcassets */,
 				CD59ECD41B1B40CD00669F62 /* Main.storyboard */,
-				CD59ECD71B1B40CD00669F62 /* Images.xcassets */,
 				CD59ECD91B1B40CD00669F62 /* LaunchScreen.xib */,
 				CD59ECCA1B1B40CD00669F62 /* Supporting Files */,
 			);
 			name = Framed;
-			path = "Screenshot Farmer";
+			path = "Framed";
 			sourceTree = "<group>";
 		};
 		CD59ECCA1B1B40CD00669F62 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD59ECCB1B1B40CD00669F62 /* Info.plist */,
-				CD59ECCC1B1B40CD00669F62 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CD59ECE31B1B40CD00669F62 /* FramedTests */ = {
-			isa = PBXGroup;
-			children = (
-				CD59ECE61B1B40CD00669F62 /* FramedTests.m */,
-				CD59ECE41B1B40CD00669F62 /* Supporting Files */,
-			);
-			name = FramedTests;
-			path = "Screenshot FarmerTests";
-			sourceTree = "<group>";
-		};
-		CD59ECE41B1B40CD00669F62 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD59ECE51B1B40CD00669F62 /* Info.plist */,
+				CD50057B1BFE6D440038AFD0 /* Info.plist */,
+				CD50057C1BFE6D440038AFD0 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,27 +111,9 @@
 			dependencies = (
 			);
 			name = framed;
-			productName = "Screenshot Farmer";
+			productName = "Framed";
 			productReference = CD59ECC71B1B40CD00669F62 /* framed.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CD59ECDF1B1B40CD00669F62 /* FramedTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CD59ECED1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "FramedTests" */;
-			buildPhases = (
-				CD59ECDC1B1B40CD00669F62 /* Sources */,
-				CD59ECDD1B1B40CD00669F62 /* Frameworks */,
-				CD59ECDE1B1B40CD00669F62 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CD59ECE21B1B40CD00669F62 /* PBXTargetDependency */,
-			);
-			name = FramedTests;
-			productName = "Screenshot FarmerTests";
-			productReference = CD59ECE01B1B40CD00669F62 /* FramedTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -184,11 +126,6 @@
 				TargetAttributes = {
 					CD59ECC61B1B40CD00669F62 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					CD59ECDF1B1B40CD00669F62 = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = G5F69H942J;
-						TestTargetID = CD59ECC61B1B40CD00669F62;
 					};
 				};
 			};
@@ -206,7 +143,6 @@
 			projectRoot = "";
 			targets = (
 				CD59ECC61B1B40CD00669F62 /* framed */,
-				CD59ECDF1B1B40CD00669F62 /* FramedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,16 +152,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD50057D1BFE6D440038AFD0 /* Info.plist in Resources */,
+				CD5005741BFE6D120038AFD0 /* Images.xcassets in Resources */,
 				CD59ECD61B1B40CD00669F62 /* Main.storyboard in Resources */,
 				CD59ECDB1B1B40CD00669F62 /* LaunchScreen.xib in Resources */,
-				CD59ECD81B1B40CD00669F62 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD59ECDE1B1B40CD00669F62 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,29 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD59ECD31B1B40CD00669F62 /* ViewController.m in Sources */,
-				CD59ECD01B1B40CD00669F62 /* AppDelegate.m in Sources */,
-				CD59ECCD1B1B40CD00669F62 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD59ECDC1B1B40CD00669F62 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD59ECE71B1B40CD00669F62 /* FramedTests.m in Sources */,
+				CD5005791BFE6D210038AFD0 /* AppDelegate.m in Sources */,
+				CD50057E1BFE6D440038AFD0 /* main.m in Sources */,
+				CD50057A1BFE6D210038AFD0 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CD59ECE21B1B40CD00669F62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CD59ECC61B1B40CD00669F62 /* framed */;
-			targetProxy = CD59ECE11B1B40CD00669F62 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CD59ECD41B1B40CD00669F62 /* Main.storyboard */ = {
@@ -371,7 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Screenshot Farmer/Info.plist";
+				INFOPLIST_FILE = Framed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.multicolouredsoftware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,54 +300,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Screenshot Farmer/Info.plist";
+				INFOPLIST_FILE = Framed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.multicolouredsoftware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		CD59ECEE1B1B40CD00669F62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Screenshot FarmerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.multicolouredsoftware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = FramedTests;
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Framed.app/Framed";
-			};
-			name = Debug;
-		};
-		CD59ECEF1B1B40CD00669F62 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Screenshot FarmerTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.multicolouredsoftware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = FramedTests;
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Framed.app/Framed";
 			};
 			name = Release;
 		};
@@ -454,15 +326,6 @@
 			buildConfigurations = (
 				CD59ECEB1B1B40CD00669F62 /* Debug */,
 				CD59ECEC1B1B40CD00669F62 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CD59ECED1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "FramedTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CD59ECEE1B1B40CD00669F62 /* Debug */,
-				CD59ECEF1B1B40CD00669F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
