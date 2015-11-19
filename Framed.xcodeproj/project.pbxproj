@@ -50,7 +50,7 @@
 		CD59ECD51B1B40CD00669F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD59ECD71B1B40CD00669F62 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD59ECDA1B1B40CD00669F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CD59ECE01B1B40CD00669F62 /* Screenshot FarmerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Screenshot FarmerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD59ECE01B1B40CD00669F62 /* FramedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FramedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59ECE51B1B40CD00669F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD59ECE61B1B40CD00669F62 /* Screenshot_FarmerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Screenshot_FarmerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CD59ECC71B1B40CD00669F62 /* framed.app */,
-				CD59ECE01B1B40CD00669F62 /* Screenshot FarmerTests.xctest */,
+				CD59ECE01B1B40CD00669F62 /* FramedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,9 +153,9 @@
 			productReference = CD59ECC71B1B40CD00669F62 /* framed.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CD59ECDF1B1B40CD00669F62 /* Screenshot FarmerTests */ = {
+		CD59ECDF1B1B40CD00669F62 /* FramedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD59ECED1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "Screenshot FarmerTests" */;
+			buildConfigurationList = CD59ECED1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "FramedTests" */;
 			buildPhases = (
 				CD59ECDC1B1B40CD00669F62 /* Sources */,
 				CD59ECDD1B1B40CD00669F62 /* Frameworks */,
@@ -166,9 +166,9 @@
 			dependencies = (
 				CD59ECE21B1B40CD00669F62 /* PBXTargetDependency */,
 			);
-			name = "Screenshot FarmerTests";
+			name = FramedTests;
 			productName = "Screenshot FarmerTests";
-			productReference = CD59ECE01B1B40CD00669F62 /* Screenshot FarmerTests.xctest */;
+			productReference = CD59ECE01B1B40CD00669F62 /* FramedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CD59ECC21B1B40CD00669F62 /* Build configuration list for PBXProject "Screenshot Farmer" */;
+			buildConfigurationList = CD59ECC21B1B40CD00669F62 /* Build configuration list for PBXProject "Framed" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -204,7 +204,7 @@
 			projectRoot = "";
 			targets = (
 				CD59ECC61B1B40CD00669F62 /* framed */,
-				CD59ECDF1B1B40CD00669F62 /* Screenshot FarmerTests */,
+				CD59ECDF1B1B40CD00669F62 /* FramedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,7 +410,7 @@
 				INFOPLIST_FILE = "Screenshot FarmerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.multicolouredsoftware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FramedTests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Framed.app/Framed";
 			};
@@ -429,7 +429,7 @@
 				INFOPLIST_FILE = "Screenshot FarmerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.multicolouredsoftware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FramedTests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Framed.app/Framed";
 			};
@@ -438,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD59ECC21B1B40CD00669F62 /* Build configuration list for PBXProject "Screenshot Farmer" */ = {
+		CD59ECC21B1B40CD00669F62 /* Build configuration list for PBXProject "Framed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD59ECE81B1B40CD00669F62 /* Debug */,
@@ -456,7 +456,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD59ECED1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "Screenshot FarmerTests" */ = {
+		CD59ECED1B1B40CD00669F62 /* Build configuration list for PBXNativeTarget "FramedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD59ECEE1B1B40CD00669F62 /* Debug */,

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Screenshot Farmer.xcodeproj">
+      location = "self:/Users/neilmcguiggan/Documents/projects/Screenshot Farmer/Framed.xcodeproj">
    </FileRef>
 </Workspace>
