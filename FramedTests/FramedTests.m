@@ -1,6 +1,6 @@
 //
-//  Screenshot_FarmerTests.m
-//  Screenshot FarmerTests
+//  FramedTests.m
+//  FramedTests
 //
 //  Created by Neil McGuiggan on 31/05/2015.
 //  Copyright (c) 2015 Multicoloured Software. All rights reserved.
