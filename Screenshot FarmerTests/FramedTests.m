@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface Screenshot_FarmerTests : XCTestCase
+@interface FramedTests : XCTestCase
 
 @end
 
-@implementation Screenshot_FarmerTests
+@implementation FramedTests
 
 - (void)setUp {
     [super setUp];

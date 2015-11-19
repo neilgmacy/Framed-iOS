@@ -13,7 +13,7 @@
 		CD59ECD61B1B40CD00669F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD59ECD41B1B40CD00669F62 /* Main.storyboard */; };
 		CD59ECD81B1B40CD00669F62 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD59ECD71B1B40CD00669F62 /* Images.xcassets */; };
 		CD59ECDB1B1B40CD00669F62 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD59ECD91B1B40CD00669F62 /* LaunchScreen.xib */; };
-		CD59ECE71B1B40CD00669F62 /* Screenshot_FarmerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59ECE61B1B40CD00669F62 /* Screenshot_FarmerTests.m */; };
+		CD59ECE71B1B40CD00669F62 /* FramedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD59ECE61B1B40CD00669F62 /* FramedTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		CD59ECDA1B1B40CD00669F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CD59ECE01B1B40CD00669F62 /* FramedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FramedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD59ECE51B1B40CD00669F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD59ECE61B1B40CD00669F62 /* Screenshot_FarmerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Screenshot_FarmerTests.m; sourceTree = "<group>"; };
+		CD59ECE61B1B40CD00669F62 /* FramedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FramedTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 		CD59ECBE1B1B40CD00669F62 = {
 			isa = PBXGroup;
 			children = (
-				CD59ECC91B1B40CD00669F62 /* Screenshot Farmer */,
-				CD59ECE31B1B40CD00669F62 /* Screenshot FarmerTests */,
+				CD59ECC91B1B40CD00669F62 /* Framed */,
+				CD59ECE31B1B40CD00669F62 /* FramedTests */,
 				CD59ECC81B1B40CD00669F62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CD59ECC91B1B40CD00669F62 /* Screenshot Farmer */ = {
+		CD59ECC91B1B40CD00669F62 /* Framed */ = {
 			isa = PBXGroup;
 			children = (
 				CD59ECCE1B1B40CD00669F62 /* AppDelegate.h */,
@@ -103,6 +103,7 @@
 				CD59ECD91B1B40CD00669F62 /* LaunchScreen.xib */,
 				CD59ECCA1B1B40CD00669F62 /* Supporting Files */,
 			);
+			name = Framed;
 			path = "Screenshot Farmer";
 			sourceTree = "<group>";
 		};
@@ -115,12 +116,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CD59ECE31B1B40CD00669F62 /* Screenshot FarmerTests */ = {
+		CD59ECE31B1B40CD00669F62 /* FramedTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD59ECE61B1B40CD00669F62 /* Screenshot_FarmerTests.m */,
+				CD59ECE61B1B40CD00669F62 /* FramedTests.m */,
 				CD59ECE41B1B40CD00669F62 /* Supporting Files */,
 			);
+			name = FramedTests;
 			path = "Screenshot FarmerTests";
 			sourceTree = "<group>";
 		};
@@ -244,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD59ECE71B1B40CD00669F62 /* Screenshot_FarmerTests.m in Sources */,
+				CD59ECE71B1B40CD00669F62 /* FramedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
