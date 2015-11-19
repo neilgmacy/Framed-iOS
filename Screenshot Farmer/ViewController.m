@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-{
+@interface ViewController () {
     NSArray *watchFrameNames;
     BOOL showingPicker;
 }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GR1-tz-vLt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GR1-tz-vLt">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Framed-->
@@ -21,6 +22,7 @@
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="steelWatchFrame" translatesAutoresizingMaskIntoConstraints="NO" id="LsF-Eg-EdL">
                                         <rect key="frame" x="0.0" y="0.0" width="242" height="270"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="270" id="Ikd-yM-wuQ"/>
@@ -29,6 +31,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKI-Ir-NDR">
                                         <rect key="frame" x="36" y="36" width="156" height="195"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="156" id="E7I-e4-bfE"/>
@@ -40,6 +43,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -59,12 +63,14 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0G-3n-XaJ">
+                            <pickerView hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0G-3n-XaJ">
                                 <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-Rf-Lv4">
                                 <rect key="frame" x="179" y="128" width="229" height="87"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="229" id="bCA-Ro-a5G"/>
@@ -73,6 +79,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUK-Pk-7Cc">
                                 <rect key="frame" x="343" y="160" width="45" height="36"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Share">
                                     <color key="titleColor" red="0.41176470590000003" green="0.21176470589999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,6 +91,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7U-bt-oGK">
                                 <rect key="frame" x="199" y="160" width="115" height="36"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Change Frame">
                                     <color key="titleColor" red="0.41176470590000003" green="0.21176470589999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,6 +102,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LsF-Eg-EdL" firstAttribute="top" secondItem="w7U-bt-oGK" secondAttribute="bottom" constant="9" id="5N2-KO-p88"/>
@@ -115,11 +124,12 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="rOQ-hn-J5h">
                                 <rect key="frame" x="70" y="214" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4G2-4V-Fvz" kind="show" id="JwB-na-01E"/>
+                                    <segue destination="K7Q-7h-PYj" kind="show" id="qk7-yV-ngz"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -149,13 +159,16 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6T-l5-TF1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4d1-rI-EjD">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.41176470590000003" green="0.21176470589999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Icons">
                                         <attributes>
@@ -292,6 +305,7 @@ Icons made by Freepik (</string>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n6T-l5-TF1" firstAttribute="height" secondItem="xr7-Xo-Jvv" secondAttribute="height" id="0eT-cy-3ns"/>
@@ -326,7 +340,7 @@ Icons made by Freepik (</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxH-6a-Xsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888" y="453"/>
+            <point key="canvasLocation" x="2038.5" y="451"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n5W-FX-fAf">
@@ -336,6 +350,10 @@ Icons made by Freepik (</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Kl-RW-KoL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -345,24 +363,6 @@ Icons made by Freepik (</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIJ-vb-tut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576" y="451"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pHO-rt-4BU">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4G2-4V-Fvz" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5n9-hT-age">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="K7Q-7h-PYj" kind="relationship" relationship="rootViewController" id="XDB-tf-bDt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eam-3G-9Na" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2076" y="453"/>
         </scene>
     </scenes>
     <resources>
